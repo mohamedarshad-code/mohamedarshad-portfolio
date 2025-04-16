@@ -195,7 +195,7 @@ export default function Terminal({ isDarkMode = true }: TerminalProps) {
           "└─────────┘",
           "",
           "Email: mail@danielprior.dk",
-          "GitHub: github.com/danielprior",
+          "GitHub: github.com/daprior",
           "LinkedIn: linkedin.com/in/daniel-prior-53a679195/",
           "Website: danielprior.dev",
           "",

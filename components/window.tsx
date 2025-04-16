@@ -14,6 +14,7 @@ import Terminal from "@/components/apps/terminal"
 import Mail from "@/components/apps/mail"
 import YouTube from "@/components/apps/youtube"
 import Spotify from "@/components/apps/spotify"
+import Snake from "@/components/apps/snake"
 
 const componentMap: Record<string, React.ComponentType<{ isDarkMode?: boolean }>> = {
   Notes,
@@ -25,6 +26,7 @@ const componentMap: Record<string, React.ComponentType<{ isDarkMode?: boolean }>
   Mail,
   YouTube,
   Spotify,
+  Snake,
 }
 
 interface WindowProps {
@@ -42,7 +44,6 @@ export default function Window({ window, isActive, onClose, onFocus, isDarkMode 
   const [dragOffset, setDragOffset] = useState({ x: 0, y: 0 })
   const [isMaximized, setIsMaximized] = useState(false)
   const [preMaximizeState, setPreMaximizeState] = useState({ position, size })
-  const [isMinimized, setIsMinimized] = useState(false)
   const [isResizing, setIsResizing] = useState(false)
   const [resizeDirection, setResizeDirection] = useState<string | null>(null)
   const [resizeStartPos, setResizeStartPos] = useState({ x: 0, y: 0 })
@@ -176,12 +177,9 @@ export default function Window({ window, isActive, onClose, onFocus, isDarkMode 
     setIsMaximized(!isMaximized)
   }
 
-  const toggleMinimize = () => {
-    setIsMinimized(!isMinimized)
-  }
-
-  if (isMinimized) {
-    return null // Don't render minimized windows
+  // Make minimize do the same as close
+  const handleMinimize = () => {
+    onClose()
   }
 
   const titleBarClass = isDarkMode
@@ -219,7 +217,7 @@ export default function Window({ window, isActive, onClose, onFocus, isDarkMode 
           </button>
           <button
             className="w-3 h-3 rounded-full bg-yellow-500 hover:bg-yellow-600 flex items-center justify-center"
-            onClick={toggleMinimize}
+            onClick={handleMinimize}
           >
             <Minus className="w-2 h-2 text-yellow-800 opacity-0 hover:opacity-100" />
           </button>

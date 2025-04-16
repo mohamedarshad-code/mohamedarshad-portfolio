@@ -5,7 +5,7 @@ import type React from "react"
 import { useState, useRef } from "react"
 import type { AppWindow } from "@/types"
 
-// Updated app list with YouTube and Spotify
+// Updated app list with Snake game
 const dockApps = [
   { id: "launchpad", title: "Launchpad", icon: "/launchpad.png", component: "Launchpad", isSystem: true },
   { id: "safari", title: "Safari", icon: "/safari.png", component: "Safari" },
@@ -17,6 +17,7 @@ const dockApps = [
   { id: "github", title: "GitHub", icon: "/github.png", component: "GitHub" },
   { id: "youtube", title: "YouTube", icon: "/youtube.png", component: "YouTube" },
   { id: "spotify", title: "Spotify", icon: "/spotify.png", component: "Spotify" },
+  { id: "snake", title: "Snake", icon: "/snake.png", component: "Snake" },
 ]
 
 interface DockProps {
@@ -26,7 +27,6 @@ interface DockProps {
   isDarkMode: boolean
 }
 
-// Enhanced macOS dock with proper magnification effect and more spacing
 export default function Dock({ onAppClick, onLaunchpadClick, activeAppIds, isDarkMode }: DockProps) {
   const [mouseX, setMouseX] = useState<number | null>(null)
   const dockRef = useRef<HTMLDivElement>(null)
