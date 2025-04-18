@@ -61,11 +61,7 @@ yarn dev
 
 Edit the following files to customize your portfolio:
 
-- `components/apps/about-me.tsx` - Your bio and personal information
-- `components/apps/projects.tsx` - Your projects showcase
-- `components/apps/skills.tsx` - Your skills and expertise
-- `components/apps/resume.tsx` - Your education and work experience
-- `components/apps/contact.tsx` - Your contact information
+- `components/apps/notes.tsx` - Your bio and personal information
 - `components/apps/terminal.tsx` - Custom terminal commands and responses
 
 
@@ -111,7 +107,7 @@ Project Link: [https://github.com/daprior/danielprior-macos](https://github.com/
 
 ---
 
-`<p align="center">`Made with ❤️ by Your Name`</p>`
+<p align="center">`Made with ❤️ by Your Name`</p>
 
 
 To see how this README will look when rendered on GitHub:
