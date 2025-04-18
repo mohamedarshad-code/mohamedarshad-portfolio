@@ -108,7 +108,6 @@ export default function Terminal({ isDarkMode = true }: TerminalProps) {
           "  whoami - Show current user",
           "  about - About me",
           "  skills - My technical skills",
-          "  projects - My projects",
           "  contact - Contact information",
           "",
         ])
@@ -128,7 +127,7 @@ export default function Terminal({ isDarkMode = true }: TerminalProps) {
         break
 
       case "ls":
-        setHistory((prev) => [...prev, "Documents", "Projects", "Resume.pdf", "Portfolio.zip", ""])
+        setHistory((prev) => [...prev, "Documents", "Projects", "Downloads", "Desktop", "Music", "Pictures", "Videos", ""])
         break
 
       case "whoami":
@@ -145,47 +144,61 @@ export default function Terminal({ isDarkMode = true }: TerminalProps) {
           "",
           "I'm a passionate web developer with expertise in",
           "creating beautiful, responsive, and user-friendly",
-          "web applications.",
+          "web applications. I love working with modern",
+          "frameworks and technologies to build",
+          "seamless user experiences. I have a strong",
+          "background in both frontend and backend",
+          "development, and I'm always eager to learn",
+          "new skills and improve my craft.",
           "",
         ])
         break
 
-      case "skills":
-        setHistory((prev) => [
-          ...prev,
-          "┌─────────────────┐",
-          "│ Technical Skills │",
-          "└─────────────────┘",
-          "",
-          "• Frontend: React, Next.js, TypeScript, Tailwind CSS",
-          "• Backend: Node.js, Express, MongoDB, PostgreSQL",
-          "• Tools: Git, Docker, Figma, VS Code",
-          "• Other: Responsive Design, Accessibility, SEO",
-          "",
-        ])
-        break
-
-      case "projects":
-        setHistory((prev) => [
-          ...prev,
-          "┌──────────┐",
-          "│ Projects │",
-          "└──────────┘",
-          "",
-          "1. Portfolio Website",
-          "   - Personal portfolio built with Next.js and Tailwind CSS",
-          "",
-          "2. E-commerce Platform",
-          "   - Full-stack online store with payment processing",
-          "",
-          "3. AI Image Generator",
-          "   - Web app that generates images using AI models",
-          "",
-          "4. React Component Library",
-          "   - Collection of reusable UI components",
-          "",
-        ])
-        break
+        case "skills":
+          setHistory((prev) => [
+            ...prev,
+            "┌──────────────┐",
+            "│   Skills     │",
+            "└──────────────┘",
+            "",
+            "Frontend:",
+            "• React / Next.js",
+            "• Vue.js / Nuxt.js",
+            "• TypeScript / JavaScript",
+            "• Tailwind CSS / SCSS",
+            "• UI/UX Design",
+            "• Responsive Web Development",
+            "• Vite / Webpack",
+            "• WordPress, Umbraco etc.",
+            "",
+            "Backend:",
+            "• Node.js / Express",
+            "• PHP / Laravel / Slim",
+            "• Python / Django",
+            "• Rust & Go (learning)",
+            "• SQL (MySQL, PostgreSQL)",
+            "• NoSQL (MongoDB)",
+            "• RESTful APIs / GraphQL",
+            "",
+            "Game Development:",
+            "• Unity / Unreal Engine",
+            "• C# & C++",
+            "• Game Design Principles",
+            "• Game Mechanics & Systems",
+            "• Blender 3D / 3D Modeling",
+            "• Animations for agri machinery & vehicles",
+            "• Godot Engine",
+            "",
+            "DevOps & Tools:",
+            "• Docker / Containerization",
+            "• CI/CD Pipelines",
+            "• Git / GitHub",
+            "• Agile / Scrum Methodologies",
+            "• AWS / Cloud Services",
+            "• Linux / Unix",
+            "",
+          ])
+          break
 
       case "contact":
         setHistory((prev) => [
