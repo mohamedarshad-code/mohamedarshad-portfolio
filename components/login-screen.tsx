@@ -70,18 +70,18 @@ export default function LoginScreen({
       </div>
 
       <div className="flex flex-col items-center">
-        {/* <div className="w-24 h-24 rounded-full bg-gray-300 flex items-center justify-center mb-4">
-          <User className="w-16 h-16 text-gray-600" />
-        </div> */}
-        <div className="w-24 h-24 rounded-full overflow-hidden bg-gray-300 flex items-center justify-center mb-4">
+        <div className="w-24 h-24 rounded-full bg-slate-800 flex items-center justify-center mb-4">
+          <span className="text-white text-5xl font-bold">D</span>
+        </div>
+        {/* <div className="w-24 h-24 rounded-full overflow-hidden bg-gray-300 flex items-center justify-center mb-4">
           <Image
-            src="/letter-d-floral.png"
+            src="/letter-d.png"
             alt="User avatar"
             width={96}
             height={96}
             className="object-cover w-full h-full"
           />
-        </div>
+        </div> */}
         <h2 className="text-white text-2xl font-medium mb-6">Daniel</h2>
 
         <form onSubmit={handleSubmit} className="flex flex-col items-center">
