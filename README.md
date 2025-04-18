@@ -107,20 +107,4 @@ Project Link: [https://github.com/daprior/danielprior-macos](https://github.com/
 
 ---
 
-<p align="center">`Made with ❤️ by Your Name`</p>
-
-
-To see how this README will look when rendered on GitHub:
-
-1. Create a file named `README.md` in the root of your project
-2. Copy and paste the entire content above into that file
-3. Push it to your GitHub repository
-
-The rendered version on GitHub will include:
-- Properly formatted headings
-- Colorful badges at the top
-- Emoji icons throughout the document
-- Proper code block formatting
-- Centered text at the bottom
-
-Remember to replace the placeholder information (like "yourusername" and "Your Name") with your actual details before publishing.
+<p align="center"><sub>Made with ❤️ by Daniel</sub></p>
