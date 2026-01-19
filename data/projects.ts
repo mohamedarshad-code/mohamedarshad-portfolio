@@ -1,0 +1,47 @@
+// Your Portfolio Projects
+// Add or edit projects here
+
+export const projects = [
+    {
+        id: 1,
+        title: "Spotify Clone",
+        description: "A fully functional Spotify clone with music player, playlists, and search functionality. Built with modern web technologies.",
+        technologies: ["React", "Next.js", "Tailwind CSS", "TypeScript"],
+        liveUrl: "https://spotify-clone-rho-swart.vercel.app/",
+        githubUrl: "https://github.com/mohamedarshad-code/spotify-clone",
+        image: "/spotify-project.png", // Add screenshot in public folder
+        featured: true,
+        category: "Web App",
+    },
+    {
+        id: 2,
+        title: "New Future Travels Website",
+        description: "A comprehensive travel booking website with tour packages, booking system, and user management. Full-stack MERN application.",
+        technologies: ["MongoDB", "Express", "React", "Node.js", "Tailwind CSS"],
+        liveUrl: "https://new-future-travels-website.vercel.app/",
+        githubUrl: "https://github.com/mohamedarshad-code/new-future-travels-website",
+        image: "/travel-project.png", // Add screenshot in public folder
+        featured: true,
+        category: "Full Stack",
+    },
+    // Add more projects here later
+    // {
+    //   id: 3,
+    //   title: "Your Next Project",
+    //   description: "Project description",
+    //   technologies: ["Tech1", "Tech2"],
+    //   liveUrl: "https://...",
+    //   githubUrl: "https://github.com/...",
+    //   image: "/project.png",
+    //   featured: false,
+    //   category: "Category",
+    // },
+]
+
+export const categories = [
+    "All",
+    "Web App",
+    "Full Stack",
+    "Mobile App",
+    "UI/UX",
+]

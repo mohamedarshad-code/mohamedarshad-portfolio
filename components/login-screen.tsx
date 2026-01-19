@@ -71,7 +71,7 @@ export default function LoginScreen({
 
       <div className="flex flex-col items-center">
         <div className="w-24 h-24 rounded-full bg-slate-800 flex items-center justify-center mb-4">
-          <span className="text-white text-5xl font-bold">D</span>
+          <span className="text-white text-5xl font-bold">A</span>
         </div>
         {/* <div className="w-24 h-24 rounded-full overflow-hidden bg-gray-300 flex items-center justify-center mb-4">
           <Image
@@ -82,7 +82,7 @@ export default function LoginScreen({
             className="object-cover w-full h-full"
           />
         </div> */}
-        <h2 className="text-white text-2xl font-medium mb-6">Daniel</h2>
+        <h2 className="text-white text-2xl font-medium mb-6">Arshad</h2>
 
         <form onSubmit={handleSubmit} className="flex flex-col items-center">
           <Input
@@ -93,9 +93,8 @@ export default function LoginScreen({
               setPassword(e.target.value);
               setError(false);
             }}
-            className={`w-64 bg-white/20 backdrop-blur-md border-0 text-white placeholder:text-white/70 mb-2 ${
-              error ? "ring-2 ring-red-500" : ""
-            }`}
+            className={`w-64 bg-white/20 backdrop-blur-md border-0 text-white placeholder:text-white/70 mb-2 ${error ? "ring-2 ring-red-500" : ""
+              }`}
           />
 
           {error && (

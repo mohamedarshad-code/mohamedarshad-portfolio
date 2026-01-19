@@ -16,12 +16,10 @@ export default function Terminal({ isDarkMode = true }: TerminalProps) {
   const inputRef = useRef<HTMLInputElement>(null)
   const terminalRef = useRef<HTMLDivElement>(null)
 
-  // Terminal is always dark
   const bgColor = "bg-black"
   const textColor = "text-green-400"
 
   useEffect(() => {
-    // Focus input when terminal is clicked
     const handleClick = () => {
       inputRef.current?.focus()
     }
@@ -30,7 +28,6 @@ export default function Terminal({ isDarkMode = true }: TerminalProps) {
     if (terminal) {
       terminal.addEventListener("click", handleClick)
 
-      // Initial welcome message
       setHistory([
         "Last login: " + new Date().toLocaleString(),
         "Welcome to macOS Terminal",
@@ -47,7 +44,6 @@ export default function Terminal({ isDarkMode = true }: TerminalProps) {
   }, [])
 
   useEffect(() => {
-    // Scroll to bottom when history changes
     if (terminalRef.current) {
       terminalRef.current.scrollTop = terminalRef.current.scrollHeight
     }
@@ -91,10 +87,8 @@ export default function Terminal({ isDarkMode = true }: TerminalProps) {
     const args = command.split(" ")
     const mainCommand = args[0]
 
-    // Add command to history
-    setHistory((prev) => [...prev, `daniel@macbook-pro ~ $ ${cmd}`, ""])
+    setHistory((prev) => [...prev, `arshad@macbook-pro ~ $ ${cmd}`, ""])
 
-    // Process command
     switch (mainCommand) {
       case "help":
         setHistory((prev) => [
@@ -131,74 +125,70 @@ export default function Terminal({ isDarkMode = true }: TerminalProps) {
         break
 
       case "whoami":
-        setHistory((prev) => [...prev, "daniel", ""])
+        setHistory((prev) => [...prev, "arshad", ""])
         break
 
       case "about":
         setHistory((prev) => [
           ...prev,
           "┌─────────────────────────────────────┐",
-          "│ Daniel Prior                        │",
-          "│ Frontend Developer & UI/UX Designer │",
+          "│ Mohamed Arshad M                    │",
+          "│ Full Stack & Flutter Developer      │",
           "└─────────────────────────────────────┘",
           "",
-          "I'm a passionate web developer with expertise in",
-          "creating beautiful, responsive, and user-friendly",
-          "web applications. I love working with modern",
-          "frameworks and technologies to build",
-          "seamless user experiences. I have a strong",
-          "background in both frontend and backend",
-          "development, and I'm always eager to learn",
-          "new skills and improve my craft.",
+          "I'm a passionate Full Stack & Flutter Developer",
+          "based in Coimbatore, India. I specialize in",
+          "building scalable web and mobile applications",
+          "with modern technologies. With expertise in",
+          "React, Next.js, Flutter, Firebase, and TypeScript,",
+          "I deliver end-to-end solutions from concept to",
+          "deployment. I'm always eager to learn new",
+          "technologies and improve my craft.",
           "",
         ])
         break
 
-        case "skills":
-          setHistory((prev) => [
-            ...prev,
-            "┌──────────────┐",
-            "│   Skills     │",
-            "└──────────────┘",
-            "",
-            "Frontend:",
-            "• React / Next.js",
-            "• Vue.js / Nuxt.js",
-            "• TypeScript / JavaScript",
-            "• Tailwind CSS / SCSS",
-            "• UI/UX Design",
-            "• Responsive Web Development",
-            "• Vite / Webpack",
-            "• WordPress, Umbraco etc.",
-            "",
-            "Backend:",
-            "• Node.js / Express",
-            "• PHP / Laravel / Slim",
-            "• Python / Django",
-            "• Rust & Go (learning)",
-            "• SQL (MySQL, PostgreSQL)",
-            "• NoSQL (MongoDB)",
-            "• RESTful APIs / GraphQL",
-            "",
-            "Game Development:",
-            "• Unity / Unreal Engine",
-            "• C# & C++",
-            "• Game Design Principles",
-            "• Game Mechanics & Systems",
-            "• Blender 3D / 3D Modeling",
-            "• Animations for agri machinery & vehicles",
-            "• Godot Engine",
-            "",
-            "DevOps & Tools:",
-            "• Docker / Containerization",
-            "• CI/CD Pipelines",
-            "• Git / GitHub",
-            "• Agile / Scrum Methodologies",
-            "• AWS / Cloud Services",
-            "• Linux / Unix",
-            "",
-          ])
-          break
+      case "skills":
+        setHistory((prev) => [
+          ...prev,
+          "┌──────────────┐",
+          "│   Skills     │",
+          "└──────────────┘",
+          "",
+          "Frontend:",
+          "• React / Next.js",
+          "• Flutter / Dart",
+          "• TypeScript / JavaScript",
+          "• Tailwind CSS / Material Design",
+          "• UI/UX Design",
+          "• Responsive Web Development",
+          "• Progressive Web Apps (PWA)",
+          "",
+          "Backend:",
+          "• Node.js / Express",
+          "• Firebase / Firestore",
+          "• Supabase",
+          "• RESTful APIs / GraphQL",
+          "• SQL (MySQL, PostgreSQL)",
+          "• NoSQL (MongoDB, Firebase)",
+          "• Serverless Architecture",
+          "",
+          "Mobile Development:",
+          "• Flutter (iOS & Android)",
+          "• Native Features Integration",
+          "• State Management (Provider, Riverpod, Bloc)",
+          "• Firebase Integration",
+          "• App Store & Play Store Deployment",
+          "",
+          "DevOps & Tools:",
+          "• Git / GitHub",
+          "• Docker",
+          "• CI/CD Pipelines",
+          "• Agile / Scrum Methodologies",
+          "• Cloud Services (Firebase, AWS)",
+          "",
+        ])
+        break
 
       case "contact":
         setHistory((prev) => [
@@ -207,10 +197,10 @@ export default function Terminal({ isDarkMode = true }: TerminalProps) {
           "│ Contact │",
           "└─────────┘",
           "",
-          "Email: mail@danielprior.dk",
-          "GitHub: github.com/daprior",
-          "LinkedIn: linkedin.com/in/daniel-prior-53a679195/",
-          "Website: danielprior.dev",
+          "Email: mohamedarshad1507@gmail.com",
+          "GitHub: github.com/mohamedarshad-code",
+          "LinkedIn: linkedin.com/in/mohamed-arshad-3b8269380",
+          "Location: Coimbatore, Tamil Nadu, India",
           "",
         ])
         break
@@ -234,7 +224,7 @@ export default function Terminal({ isDarkMode = true }: TerminalProps) {
       ))}
 
       <div className="flex">
-        <span className="mr-2">daniel@macbook-pro ~ $</span>
+        <span className="mr-2">arshad@macbook-pro ~ $</span>
         <input
           ref={inputRef}
           type="text"

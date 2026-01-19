@@ -9,88 +9,89 @@ interface NotesProps {
 }
 
 export default function Notes({ isDarkMode = true }: NotesProps) {
-  // Update the notes state with enhanced content
   const [notes, setNotes] = useState([
     {
       id: 1,
       title: "About Me",
-      content: `# Daniel Prior
-Frontend Developer & Full Stack Engineer
+      content: `# Mohamed Arshad M
+Full Stack Developer & Flutter Specialist
 
 ## Skills
 ### Frontend
 - React/Next.js
-- Vue.js/Nuxt.js
+- Flutter/Dart
 - TypeScript/JavaScript
-- Tailwind CSS/SCSS
+- Tailwind CSS/Material Design
 - UI/UX Design
 - Responsive Web Development
-- Vite/Webpack
-- Wordpress, Umbraco etc.
+- Progressive Web Apps (PWA)
 
 ### Backend
 - Node.js/Express
-- PHP/Laravel/Slim
-- Python/Django
-- Rust & GO (learning)
-- SQL (MySQL, PostgreSQL)
-- NoSQL (MongoDB)
+- Firebase/Firestore
+- Supabase
 - RESTful APIs/GraphQL
+- SQL (MySQL, PostgreSQL)
+- NoSQL (MongoDB, Firebase)
+- Serverless Architecture
 
-### Game Development
-- Unity/Unreal Engine
-- C# & C++
-- Game Design Principles
-- Game Mechanics & Systems
-- Blender 3D/3D Modeling
-- Animations for agricultural machinery and vehicles
-- Godot Engine
+### Mobile Development
+- Flutter (iOS & Android)
+- Native Features Integration
+- State Management (Provider, Riverpod, Bloc)
+- Firebase Integration
+- App Store & Play Store Deployment
 
 ### DevOps & Tools
-- Docker/Containerization
-- CI/CD Pipelines
 - Git/GitHub
+- Docker
+- CI/CD Pipelines
 - Agile/Scrum Methodologies
-- AWS/Cloud Services
-- Linux/Unix
+- Cloud Services (Firebase, AWS)
 
 ## Experience
-Currently working as a Senior Full Stack Developer, focusing on building accessible, performant, and scalable web applications. Experienced in leading development teams and implementing best practices for modern web development.
+Senior Full Stack & Flutter Developer based in Coimbatore, India. Specializing in building scalable web and mobile applications with modern technologies. Experienced in delivering end-to-end solutions from concept to deployment.
+
+## Projects
+- AI Trip Architect - Travel planning application
+- E-Commerce Platform - Full-stack shopping solution
+- Food Delivery App - Real-time order management system
 
 ## Contact
-Email: mail@danielprior.dk
-GitHub: github.com/daprior
-Portfolio: danielprior.dev`,
+Email: mohamedarshad1507@gmail.com
+Location: Coimbatore, Tamil Nadu, India
+Portfolio: yourportfolio.com`,
       date: "Today, 10:30 AM",
     },
     {
       id: 2,
-      title: "Learning Goals",
-      content: `# Learning Goals
+      title: "Services & Pricing",
+      content: `# Services & Pricing
 
-## Career & Independence
-- Network with like-minded professionals and mentors
-- Build a personal brand and online presence
-- Work on meaningful AI projects with real-world impact
-- Enhance knowledge in industries I'm passionate about (fintech, finance, web3 and automotive)
+## Web Development
+- Custom Website Development
+- E-Commerce Solutions
+- Progressive Web Apps (PWA)
+- API Development & Integration
 
-## Technical Skills
-- Master Rust for performance-critical applications and systems programming
-- Improve Go proficiency for backend services and microservices
-- Deepen knowledge of AI/ML frameworks and practical applications
-- Make popular games with Unity and Unreal Engine
+## Mobile App Development
+- Flutter iOS & Android Apps
+- Cross-Platform Solutions
+- App Store Deployment
+- Maintenance & Support
 
-## Personal Projects
-- Develop an indie game from concept to release
-- Build AI-powered tools that enhance creative workflows
-- Create open-source libraries that solve real problems
-- Contribute to projects I use and admire
+## Full Stack Solutions
+- End-to-End Development
+- Database Design
+- Cloud Integration
+- Performance Optimization
 
-## Learning Approach
-- Focus on deep understanding rather than surface-level knowledge
-- Build complete projects rather than just tutorials and unfinished projects
-- Share knowledge and experiences with the community
-- Maintain a balance between breadth and depth of skills`,
+## Pricing
+- Hourly Rate: Competitive rates
+- Project-Based: Custom quotes
+- Retainer: Monthly packages available
+
+Contact for detailed pricing and project discussion.`,
       date: "Yesterday, 3:15 PM",
     },
   ])

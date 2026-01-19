@@ -11,17 +11,14 @@ export default function YouTube({ isDarkMode = true }: YouTubeProps) {
   const bgColor = isDarkMode ? "bg-gray-900" : "bg-white"
   const hasOpenedRef = useRef(false)
 
-  // Open YouTube channel when the app is opened
+  // Open YouTube homepage when the app is opened
   useEffect(() => {
     // Only open once
     if (!hasOpenedRef.current) {
       hasOpenedRef.current = true
 
-      // Your YouTube channel URL
-      const youtubeUrl = "https://www.youtube.com/@DanielPrior0"
-
-      // Open in new tab
-      window.open(youtubeUrl, "_blank")
+      // Open YouTube homepage
+      window.open("https://www.youtube.com", "_blank")
     }
   }, [])
 
@@ -30,7 +27,7 @@ export default function YouTube({ isDarkMode = true }: YouTubeProps) {
       <div className="text-center">
         <img src="/youtube.png" alt="YouTube" className="w-16 h-16 mx-auto mb-4 object-contain" />
         <h2 className="text-xl font-semibold mb-2">Opening YouTube...</h2>
-        <p>Redirecting to your YouTube channel</p>
+        <p>Redirecting to YouTube</p>
       </div>
     </div>
   )

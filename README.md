@@ -6,18 +6,16 @@ A stunning, interactive macOS-inspired portfolio website built with Next.js and 
 [![Next.js](https://img.shields.io/badge/Next.js-13%2B-black)](https://nextjs.org/)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind-3.0-38B2AC)](https://tailwindcss.com/)
 
-![macOS Portfolio Demo](public/macos-portfolio-demo.png)
+## 👨‍💻 Portfolio
 
-## 👨‍💻 Demo
-
-Demo Link: [http://danielprior.dev](http://danielprior.dev)
+Full Stack & Flutter Developer Portfolio - Mohamed Arshad M
 
 ### ✨ Features
 
 - 🖥️ Realistic macOS interface with dark/light mode
 - 🚀 Interactive desktop experience with working windows
 - 🔍 Spotlight search functionality
-- 🧩 Multiple apps to showcase your skills and projects:
+- 🧩 Multiple apps to showcase skills and projects:
   - Safari (For browsing)
   - Notes (for bio/resume/about)
   - Terminal (interactive command line)
@@ -46,22 +44,26 @@ Demo Link: [http://danielprior.dev](http://danielprior.dev)
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/daprior/danielprior-macos.git
-cd macos-portfolio
+git clone https://github.com/mohamedarshad-code/portfolio.git
+cd portfolio
+```
 
-2. Install 
+2. Install dependencies:
 
-npm install
+```bash
+npm install --legacy-peer-deps
 # or
 yarn install
+```
 
 3. Run the development server:
 
+```bash
 npm run dev
 # or
 yarn dev
-
 ```
+
 4. Open [http://localhost:3000](http://localhost:3000) in your browser to see the result.
 
 ## 🎨 Customization
@@ -72,16 +74,7 @@ Edit the following files to customize your portfolio:
 
 - `components/apps/notes.tsx` - Your bio and personal information
 - `components/apps/terminal.tsx` - Custom terminal commands and responses
-
-### Social Links
-
-Update your social media links in:
-
-- `components/apps/github.tsx` - GitHub profile URL
-- `components/apps/youtube.tsx` - YouTube channel URL
-- `components/apps/mail.tsx` - Email address
 - `components/apps/safari.tsx` - Featured websites and social links
-
 
 ### Appearance
 
@@ -89,31 +82,24 @@ Update your social media links in:
 - Update app icons in the `public` folder
 - Modify the color scheme in `tailwind.config.ts`
 
-
 ## 📝 License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-**Important**: If you use this template for your own portfolio, you must include attribution to the original author. Please keep the attribution in the footer or about section of your site.
-
 ## 🙏 Acknowledgments
 
-- Special thanks to [Renovamen](https://github.com/Renovamen/playground-macos) for the original inspiration for this macOS-themed portfolio concept.
+- Original macOS portfolio concept inspired by various open-source projects
 - Icons from [Lucide React](https://lucide.dev/)
 - UI components from [shadcn/ui](https://ui.shadcn.com/)
-- Initial layout jump-started with v0 — [V0/Vercel](https://v0.dev/)
 - Built with [Next.js](https://nextjs.org/) and [Tailwind CSS](https://tailwindcss.com/)
-
-## 🤝 Contributing
-
-Contributions, issues, and feature requests are welcome! Feel free to check the [issues page](https://github.com/daprior/danielprior-macos/issues).
 
 ## 📧 Contact
 
-Daniel Prior - [mail@danielprior.dk](mailto:mail@danielprior.dk)
-
-Project Link: [https://github.com/daprior/danielprior-macos](https://github.com/daprior/danielprior-macos)
+Mohamed Arshad M
+- GitHub: [mohamedarshad-code](https://github.com/mohamedarshad-code)
+- LinkedIn: [mohamed-arshad-3b8269380](https://www.linkedin.com/in/mohamed-arshad-3b8269380/)
+- Location: Coimbatore, Tamil Nadu, India
 
 ---
 
-<p align="center"><sub>Made with ❤️ by Daniel</sub></p>
+<p align="center"><sub>Built with ❤️ by Mohamed Arshad M</sub></p>

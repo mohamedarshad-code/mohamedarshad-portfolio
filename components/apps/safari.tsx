@@ -8,7 +8,7 @@ interface SafariProps {
 }
 
 export default function Safari({ isDarkMode = true }: SafariProps) {
-  const [url, setUrl] = useState("https://danielprior.dev")
+  const [url, setUrl] = useState("https://github.com/mohamedarshad-code")
   const [isLoading, setIsLoading] = useState(false)
   const [activeTab, setActiveTab] = useState("home")
   const [wifiEnabled, setWifiEnabled] = useState(true)
@@ -47,23 +47,33 @@ export default function Safari({ isDarkMode = true }: SafariProps) {
   const socialLinks = [
     {
       title: "LinkedIn",
-      url: "https://www.linkedin.com/in/daniel-prior-53a679195/",
+      url: "https://www.linkedin.com/in/mohamed-arshad-3b8269380/",
       icon: "/linkedin.png",
     },
     {
       title: "GitHub",
-      url: "https://github.com/daprior",
+      url: "https://github.com/mohamedarshad-code",
       icon: "/github.png",
     },
+  ]
+
+  // Projects
+  const projects = [
     {
-      title: "YouTube",
-      url: "https://www.youtube.com/@DanielPrior0",
-      icon: "/youtube.png",
+      title: "Spotify Clone",
+      description: "Full-featured music streaming app with playlists and search",
+      tech: "React • Next.js • TypeScript",
+      liveUrl: "https://spotify-clone-rho-swart.vercel.app/",
+      githubUrl: "https://github.com/mohamedarshad-code/spotify-clone",
+      icon: "/spotify.png",
     },
     {
-      title: "Email",
-      url: "mailto:mail@danielprior.dk",
-      icon: "/mail.png",
+      title: "New Future Travels",
+      description: "Travel booking platform with tour packages and management",
+      tech: "MERN Stack • Tailwind CSS",
+      liveUrl: "https://new-future-travels-website.vercel.app/",
+      githubUrl: "https://github.com/mohamedarshad-code/new-future-travels-website",
+      icon: "/safari.png",
     },
   ]
 
@@ -113,9 +123,8 @@ export default function Safari({ isDarkMode = true }: SafariProps) {
         This page can't be displayed because your computer is currently offline.
       </p>
       <button
-        className={`px-4 py-2 rounded ${
-          isDarkMode ? "bg-blue-600 hover:bg-blue-700" : "bg-blue-500 hover:bg-blue-600"
-        } text-white`}
+        className={`px-4 py-2 rounded ${isDarkMode ? "bg-blue-600 hover:bg-blue-700" : "bg-blue-500 hover:bg-blue-600"
+          } text-white`}
         onClick={handleRefresh}
       >
         Try Again
@@ -187,7 +196,7 @@ export default function Safari({ isDarkMode = true }: SafariProps) {
                   <div
                     key={index}
                     className={`flex flex-col items-center p-4 rounded-lg ${hoverBg} cursor-pointer`}
-                    onClick={() => setUrl(link.url)}
+                    onClick={() => window.open(link.url, "_blank")}
                   >
                     <div className="w-12 h-12 bg-white rounded-lg flex items-center justify-center mb-2 overflow-hidden">
                       <img src={link.icon || "/placeholder.svg"} alt={link.title} className="w-8 h-8 object-contain" />
@@ -204,7 +213,7 @@ export default function Safari({ isDarkMode = true }: SafariProps) {
                   <div
                     key={index}
                     className={`flex flex-col items-center p-4 rounded-lg ${hoverBg} cursor-pointer`}
-                    onClick={() => setUrl(site.url)}
+                    onClick={() => window.open(site.url, "_blank")}
                   >
                     <div className="w-12 h-12 bg-white rounded-lg flex items-center justify-center mb-2 overflow-hidden">
                       <img src={site.icon || "/placeholder.svg"} alt={site.title} className="w-8 h-8 object-contain" />
@@ -214,16 +223,60 @@ export default function Safari({ isDarkMode = true }: SafariProps) {
                 ))}
               </div>
 
+              <h2 className="text-2xl font-bold mb-6">My Projects</h2>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
+                {projects.map((project, index) => (
+                  <div
+                    key={index}
+                    className={`${cardBg} rounded-xl p-6 border ${borderColor} hover:border-blue-500 transition-all cursor-pointer group`}
+                  >
+                    <div className="flex items-start gap-4 mb-4">
+                      <div className="w-12 h-12 bg-white rounded-lg flex items-center justify-center flex-shrink-0">
+                        <img src={project.icon || "/placeholder.svg"} alt={project.title} className="w-8 h-8 object-contain" />
+                      </div>
+                      <div className="flex-1">
+                        <h3 className="font-semibold text-lg mb-1 group-hover:text-blue-500 transition-colors">
+                          {project.title}
+                        </h3>
+                        <p className="text-xs text-gray-500">{project.tech}</p>
+                      </div>
+                    </div>
+                    <p className="text-sm text-gray-400 mb-4">{project.description}</p>
+                    <div className="flex gap-3">
+                      <button
+                        onClick={(e) => {
+                          e.stopPropagation()
+                          window.open(project.liveUrl, "_blank")
+                        }}
+                        className="flex-1 px-4 py-2 bg-blue-500 hover:bg-blue-600 text-white rounded-lg text-sm font-medium transition-colors"
+                      >
+                        View Live
+                      </button>
+                      <button
+                        onClick={(e) => {
+                          e.stopPropagation()
+                          window.open(project.githubUrl, "_blank")
+                        }}
+                        className={`flex-1 px-4 py-2 ${isDarkMode ? 'bg-gray-700 hover:bg-gray-600' : 'bg-gray-200 hover:bg-gray-300'} rounded-lg text-sm font-medium transition-colors`}
+                      >
+                        GitHub
+                      </button>
+                    </div>
+                  </div>
+                ))}
+              </div>
+
               <div className="mt-8 max-w-2xl mx-auto">
                 <div className={`p-6 rounded-lg ${cardBg}`}>
-                  <h3 className="text-xl font-semibold mb-4">Daniel Prior - Portfolio</h3>
+                  <h3 className="text-xl font-semibold mb-4">Mohamed Arshad M - Portfolio</h3>
                   <p className="mb-4">
-                    Welcome to my portfolio website! I'm a frontend developer specializing in creating beautiful,
-                    responsive, and user-friendly web applications.
+                    Welcome to my portfolio! I'm a Full Stack & Flutter Developer specializing in building scalable
+                    web and mobile applications with modern technologies.
                   </p>
                   <p className="mb-4">
-                    With expertise in React, Next.js, TypeScript, and modern CSS frameworks, I build performant web
-                    experiences that users love.
+                    With expertise in React, Next.js, Flutter, Firebase, and TypeScript, I deliver end-to-end solutions
+                    from concept to deployment.
                   </p>
                   <div className="flex justify-end">
                     <button
