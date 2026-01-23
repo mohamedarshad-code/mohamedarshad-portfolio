@@ -24,6 +24,17 @@ export const projects = [
         featured: true,
         category: "Full Stack",
     },
+    {
+        id: 3,
+        title: "Madras Coffee House",
+        description: "A premium coffee shop website featuring a heritage light aesthetic, detailed product menu, and organic design elements.",
+        technologies: ["React", "Next.js", "Tailwind CSS", "TypeScript"],
+        liveUrl: "https://madrascoffehouse.vercel.app/",
+        githubUrl: "https://github.com/mohamedarshad-code/madrascoffehouse",
+        image: "/madras-coffee-project.png",
+        featured: true,
+        category: "Web App",
+    },
     // Add more projects here later
     // {
     //   id: 3,

@@ -75,6 +75,14 @@ export default function Safari({ isDarkMode = true }: SafariProps) {
       githubUrl: "https://github.com/mohamedarshad-code/new-future-travels-website",
       icon: "/safari.png",
     },
+    {
+      title: "Madras Coffee House",
+      description: "Premium coffee shop website with heritage light aesthetic",
+      tech: "React • Next.js • Tailwind CSS",
+      liveUrl: "https://madrascoffehouse.vercel.app/",
+      githubUrl: "https://github.com/mohamedarshad-code/madrascoffehouse",
+      icon: "/madras-coffee-project.png",
+    },
   ]
 
   const frequentlyVisited = [
